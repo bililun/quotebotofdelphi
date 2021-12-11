@@ -1,8 +1,5 @@
 # Hi! Welcome to Quotebot's README.
 
-## [Video link](https://youtu.be/gvzLyKQ4A08)
-aka https://youtu.be/gvzLyKQ4A08 if that didn't link correctly
-
 To run Quotebot, you'll need a few things. 
 
 ## Discord account
