@@ -58,8 +58,8 @@ def submitquote(m):
     if quoteflavor is not None:
         submitter = m.author.id
         # check for prefix content
-        submitteridx = quoteflavor["prefix"].index("submitter:")
-        if submitteridx:
+        try:
+            submitteridx = quoteflavor["prefix"].index("submitter:")
             # take the prefix string, substring to after the index of "submitter:", then take the second word (the word after "submitter:")
             submitternick = quoteflavor["prefix"][submitteridx:].split()[1]
             submitter = m.guild.get_member_named(submitternick)
