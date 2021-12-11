@@ -66,6 +66,8 @@ def submitquote(m):
             if not submitter:
                 return "couldn't find a user in this server with the (case-sensitive) name \"" + submitternick + "\", submission cancelled"
             submitter = submitter.id
+        except:
+            submitter = m.author.id
 
         # if all that worked, put it in the quotes table
         insertedid = db.execute("INSERT INTO quotes (guild_id, submitter, quote, flavor) VALUES (?, ?, ?, ?)", m.guild.id, submitter, quoteflavor["quote"], quoteflavor["flavor"])
